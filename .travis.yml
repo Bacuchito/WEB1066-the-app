@@ -1,5 +1,7 @@
 language: java
 jdk: openjdk8
+dist: trusty
 
-script: 
- - echo "testing coming soon"
+script:
+  - ./gradlew clean jar
+  - echo "Testing coming soon! Yey!"
