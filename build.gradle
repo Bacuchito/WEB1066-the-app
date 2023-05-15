@@ -1,7 +1,11 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
-apply plugin: 'de.gesellix.debian' version '2022-07-28T23-23-00'
+apply plugin: 'de.gesellix.debian' {
+    versionCode = '2022-07-28T23-23-00'
+    versionName = '1.0.0'
+}
+
 
 
 test.onlyIf { !Boolean.getBoolean('skip.tests') }
