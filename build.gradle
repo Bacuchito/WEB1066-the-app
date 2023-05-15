@@ -29,7 +29,9 @@ buildscript {
     }
 }
 
-apply(plugin = "de.gesellix.debian")
+plugins {
+  id("de.gesellix.debian") version "2022-07-28T23-23-00"
+}
 allprojects {
     apply plugin: 'java'
 
