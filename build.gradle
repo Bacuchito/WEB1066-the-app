@@ -20,23 +20,16 @@ props.each({ project.ext[it.key] = it.value })
 
 buildscript {
     repositories {
-        mavenCentral()
         maven {
-            url "http://dl.bintray.com/gesellix/gradle-plugins"
+            url = uri("https://plugins.gradle.org/m2/")
         }
-        jcenter()
     }
     dependencies {
-        classpath "org.springframework.boot:spring-boot-gradle-plugin:1.1.8.RELEASE"
-        classpath "de.gesellix:gradle-debian-plugin:14"
-        classpath "com.moowork.gradle:gradle-grunt-plugin:0.6"
-        classpath "org.kt3k.gradle.plugin:coveralls-gradle-plugin:1.0.2"
-        classpath 'se.transmode.gradle:gradle-docker:1.2'
-        classpath 'org.codehaus.groovy:groovy-backports-compat23:2.3.5'
-        classpath 'com.sahlbach.gradle:gradle-jetty-eclipse-plugin:1.9.+'
+        classpath("de.gesellix:gradle-debian-plugin:2022-07-28T23-23-00")
     }
 }
 
+apply(plugin = "de.gesellix.debian")
 allprojects {
     apply plugin: 'java'
 
