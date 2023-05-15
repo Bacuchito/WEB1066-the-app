@@ -1,6 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
+apply plugins 'de.gesellix.debian' version '2022-07-28T23-23-00'
 
 test.onlyIf { !Boolean.getBoolean('skip.tests') }
 
@@ -29,9 +30,7 @@ buildscript {
     }
 }
 
-plugins {
-  id("de.gesellix.debian") version "2022-07-28T23-23-00"
-}
+apply plugin: 'de.gesellix.debian'
 allprojects {
     apply plugin: 'java'
 
