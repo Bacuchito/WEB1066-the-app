@@ -1,10 +1,8 @@
 language: java
+jdk: oraclejdk8
 
-before_install:
-  - wget https://download.oracle.com/otn/java/jdk/8u301-b09/jdk-8u301-linux-x64.tar.gz
-  - tar -xzvf jdk-8u301-linux-x64.tar.gz
-  - export JAVA_HOME=$PWD/jdk1.8.0_301
-  - export PATH=$JAVA_HOME/bin:$PATH
+before_script:
+  - echo "JAVA_HOME: $JAVA_HOME"
 
-script:
-  - echo "testing coming soon"
+script: 
+ - echo "testing coming soon"
